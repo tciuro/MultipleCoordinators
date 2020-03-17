@@ -14,6 +14,14 @@
 		59FC4098241F07C00045699E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FC4097241F07C00045699E /* Assets.xcassets */; };
 		59FC409B241F07C00045699E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FC4099241F07C00045699E /* LaunchScreen.storyboard */; };
 		59FC40A6241F07C10045699E /* MultipleCoordinatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40A5241F07C10045699E /* MultipleCoordinatorsTests.swift */; };
+		59FC40B6241F08E90045699E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40B5241F08E90045699E /* Coordinator.swift */; };
+		59FC40B8241F09970045699E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40B7241F09970045699E /* MainCoordinator.swift */; };
+		59FC40BA241F0F090045699E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40B9241F0F090045699E /* BuyViewController.swift */; };
+		59FC40BC241F0F160045699E /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40BB241F0F160045699E /* CreateAccountViewController.swift */; };
+		59FC40C0241F11860045699E /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40BF241F11860045699E /* GFButton.swift */; };
+		59FC40C3241F24170045699E /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40C2241F24170045699E /* BuyCoordinator.swift */; };
+		59FC40C6241F2D9F0045699E /* TCSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40C5241F2D9F0045699E /* TCSegmentedControl.swift */; };
+		59FC40CA241F39D60045699E /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC40C9241F39D60045699E /* CreateAccountCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,14 @@
 		59FC40A1241F07C10045699E /* MultipleCoordinatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipleCoordinatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FC40A5241F07C10045699E /* MultipleCoordinatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCoordinatorsTests.swift; sourceTree = "<group>"; };
 		59FC40A7241F07C10045699E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59FC40B5241F08E90045699E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		59FC40B7241F09970045699E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		59FC40B9241F0F090045699E /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		59FC40BB241F0F160045699E /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		59FC40BF241F11860045699E /* GFButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		59FC40C2241F24170045699E /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
+		59FC40C5241F2D9F0045699E /* TCSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSegmentedControl.swift; sourceTree = "<group>"; };
+		59FC40C9241F39D60045699E /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +95,12 @@
 		59FC408D241F07C00045699E /* MultipleCoordinators */ = {
 			isa = PBXGroup;
 			children = (
-				59FC408E241F07C00045699E /* AppDelegate.swift */,
-				59FC4090241F07C00045699E /* SceneDelegate.swift */,
-				59FC4092241F07C00045699E /* ViewController.swift */,
-				59FC4094241F07C00045699E /* Main.storyboard */,
-				59FC4097241F07C00045699E /* Assets.xcassets */,
-				59FC4099241F07C00045699E /* LaunchScreen.storyboard */,
-				59FC409C241F07C00045699E /* Info.plist */,
+				59FC40C1241F23CC0045699E /* Application */,
+				59FC40BD241F11720045699E /* CustomViews */,
+				59FC40B2241F08530045699E /* Coordinators */,
+				59FC40B3241F08660045699E /* ViewControllers */,
+				59FC40B4241F08730045699E /* Resources */,
+				59FC40B1241F08340045699E /* Support */,
 			);
 			path = MultipleCoordinators;
 			sourceTree = "<group>";
@@ -94,9 +109,90 @@
 			isa = PBXGroup;
 			children = (
 				59FC40A5241F07C10045699E /* MultipleCoordinatorsTests.swift */,
-				59FC40A7241F07C10045699E /* Info.plist */,
+				59FC40B0241F07FA0045699E /* Support */,
 			);
 			path = MultipleCoordinatorsTests;
+			sourceTree = "<group>";
+		};
+		59FC40B0241F07FA0045699E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				59FC40A7241F07C10045699E /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		59FC40B1241F08340045699E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				59FC409C241F07C00045699E /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		59FC40B2241F08530045699E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				59FC40B5241F08E90045699E /* Coordinator.swift */,
+				59FC40B7241F09970045699E /* MainCoordinator.swift */,
+				59FC40C2241F24170045699E /* BuyCoordinator.swift */,
+				59FC40C9241F39D60045699E /* CreateAccountCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		59FC40B3241F08660045699E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				59FC4092241F07C00045699E /* ViewController.swift */,
+				59FC40B9241F0F090045699E /* BuyViewController.swift */,
+				59FC40BB241F0F160045699E /* CreateAccountViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		59FC40B4241F08730045699E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59FC4094241F07C00045699E /* Main.storyboard */,
+				59FC4097241F07C00045699E /* Assets.xcassets */,
+				59FC4099241F07C00045699E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59FC40BD241F11720045699E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				59FC40BE241F11860045699E /* Buttons */,
+				59FC40C4241F2D880045699E /* SegmentedControl */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		59FC40BE241F11860045699E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				59FC40BF241F11860045699E /* GFButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		59FC40C1241F23CC0045699E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				59FC408E241F07C00045699E /* AppDelegate.swift */,
+				59FC4090241F07C00045699E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		59FC40C4241F2D880045699E /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				59FC40C5241F2D9F0045699E /* TCSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +296,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FC40C3241F24170045699E /* BuyCoordinator.swift in Sources */,
+				59FC40BC241F0F160045699E /* CreateAccountViewController.swift in Sources */,
+				59FC40CA241F39D60045699E /* CreateAccountCoordinator.swift in Sources */,
+				59FC40B6241F08E90045699E /* Coordinator.swift in Sources */,
+				59FC40C0241F11860045699E /* GFButton.swift in Sources */,
 				59FC4093241F07C00045699E /* ViewController.swift in Sources */,
+				59FC40C6241F2D9F0045699E /* TCSegmentedControl.swift in Sources */,
 				59FC408F241F07C00045699E /* AppDelegate.swift in Sources */,
+				59FC40B8241F09970045699E /* MainCoordinator.swift in Sources */,
 				59FC4091241F07C00045699E /* SceneDelegate.swift in Sources */,
+				59FC40BA241F0F090045699E /* BuyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -366,7 +470,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPSB745WH7;
-				INFOPLIST_FILE = MultipleCoordinators/Info.plist;
+				INFOPLIST_FILE = MultipleCoordinators/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +489,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPSB745WH7;
-				INFOPLIST_FILE = MultipleCoordinators/Info.plist;
+				INFOPLIST_FILE = MultipleCoordinators/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,8 +509,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPSB745WH7;
-				INFOPLIST_FILE = MultipleCoordinatorsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = MultipleCoordinatorsTests/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,8 +531,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPSB745WH7;
-				INFOPLIST_FILE = MultipleCoordinatorsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = MultipleCoordinatorsTests/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

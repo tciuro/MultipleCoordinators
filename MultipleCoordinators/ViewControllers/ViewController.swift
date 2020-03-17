@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     weak var coordinator: MainCoordinator?
     
     let logoImageView = UIImageView()
@@ -91,6 +90,4 @@ class ViewController: UIViewController {
             productSegmentedControl.heightAnchor.constraint(equalToConstant: 50.0)
         ])
     }
-
 }
-

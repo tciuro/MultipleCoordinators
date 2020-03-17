@@ -9,7 +9,6 @@
 import UIKit
 
 class BuyViewController: UIViewController {
-
     weak var coordinator: BuyCoordinator?
     weak var productSegmentedControl: TCSegmentedControl?
     
@@ -25,5 +24,4 @@ class BuyViewController: UIViewController {
             title = "Selected Product: " + String(productSegmentedControl.titleForSegment(at: index) ?? "???")
         }
     }
-    
 }

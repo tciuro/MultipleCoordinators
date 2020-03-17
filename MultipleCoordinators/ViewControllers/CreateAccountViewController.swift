@@ -9,12 +9,10 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
-
     weak var coordinator: CreateAccountCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
     }
-
 }

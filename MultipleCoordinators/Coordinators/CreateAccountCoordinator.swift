@@ -9,7 +9,6 @@
 import UIKit
 
 class CreateAccountCoordinator: Coordinator {
-    
     weak var parentCoordinator: MainCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -17,11 +16,12 @@ class CreateAccountCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
-    func start(with context: Any?) {
+}
+
+extension CreateAccountCoordinator: Startable {
+    func start() {
         let vc = CreateAccountViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
-    
 }

@@ -9,7 +9,6 @@
 import UIKit
 
 class TCSegmentedControl: UISegmentedControl {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -37,5 +36,4 @@ class TCSegmentedControl: UISegmentedControl {
         self.selectedSegmentIndex = 0
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

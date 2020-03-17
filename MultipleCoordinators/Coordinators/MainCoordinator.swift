@@ -9,19 +9,11 @@
 import UIKit
 
 class MainCoordinator: NSObject, Coordinator {
-    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-    }
-    
-    func start(with context: Any?) {
-        navigationController.delegate = self
-        let vc = ViewController()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
     }
     
     func buySubscription(with segmentedControl: TCSegmentedControl) {
@@ -35,7 +27,7 @@ class MainCoordinator: NSObject, Coordinator {
         let child = CreateAccountCoordinator(navigationController: navigationController)
         child.parentCoordinator = self
         childCoordinators.append(child)
-        child.start(with: nil)
+        child.start()
     }
     
     func childDidFinish(_ child: Coordinator?) {
@@ -46,11 +38,18 @@ class MainCoordinator: NSObject, Coordinator {
             }
         }
     }
-    
+}
+
+extension MainCoordinator: Startable {
+    func start() {
+        navigationController.delegate = self
+        let vc = ViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
 extension MainCoordinator: UINavigationControllerDelegate {
-    
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
         
@@ -60,5 +59,4 @@ extension MainCoordinator: UINavigationControllerDelegate {
             childDidFinish(buyViewController.coordinator)
         }
     }
-    
 }

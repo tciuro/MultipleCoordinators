@@ -12,10 +12,12 @@
 // Advanced Coordinators in iOS
 // https://www.youtube.com/watch?v=ueByb0MBMQ4
 
+// Using protocol compositon for dependency injection
+// http://merowing.info/2017/04/using-protocol-compositon-for-dependency-injection/
+
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
     var coordinator: MainCoordinator?
 
@@ -25,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         navController.title = "Hello"
         coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.start(with: nil)
+        coordinator?.start()
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
@@ -39,20 +41,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().tintColor = .systemGreen
     }
     
-    func sceneDidDisconnect(_ scene: UIScene) {
-    }
-    
-    func sceneDidBecomeActive(_ scene: UIScene) {
-    }
-    
-    func sceneWillResignActive(_ scene: UIScene) {
-    }
-    
-    func sceneWillEnterForeground(_ scene: UIScene) {
-    }
-    
-    func sceneDidEnterBackground(_ scene: UIScene) {
-    }
-    
+    func sceneDidDisconnect(_ scene: UIScene) {}
+    func sceneDidBecomeActive(_ scene: UIScene) {}
+    func sceneWillResignActive(_ scene: UIScene) {}
+    func sceneWillEnterForeground(_ scene: UIScene) {}
+    func sceneDidEnterBackground(_ scene: UIScene) {}
 }
 

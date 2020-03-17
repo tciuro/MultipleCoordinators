@@ -9,7 +9,6 @@
 import UIKit
 
 class BuyCoordinator: Coordinator {
-    
     weak var parentCoordinator: MainCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -17,15 +16,19 @@ class BuyCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
-    func start(with context: Any?) {
-        guard let productSegmentedControl = context as? TCSegmentedControl else { fatalError() }
-        
+}
+
+// MARK: -
+
+protocol BuyStartable {
+    func start(with segmentedControl: TCSegmentedControl)
+}
+
+extension BuyCoordinator: BuyStartable {
+    func start(with segmentedControl: TCSegmentedControl) {
         let vc = BuyViewController()
-        vc.productSegmentedControl = productSegmentedControl
+        vc.productSegmentedControl = segmentedControl
         vc.coordinator = self
-        
         navigationController.pushViewController(vc, animated: true)
     }
-    
 }

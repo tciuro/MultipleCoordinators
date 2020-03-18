@@ -38,12 +38,17 @@ class MainCoordinator: NSObject, Coordinator {
             }
         }
     }
+    
+    func mainViewController() -> UIViewController? {
+        return navigationController.viewControllers.first
+    }
 }
 
 extension MainCoordinator: Startable {
     func start() {
         navigationController.delegate = self
         let vc = ViewController()
+        vc.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "star.fill"), tag: 0)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }

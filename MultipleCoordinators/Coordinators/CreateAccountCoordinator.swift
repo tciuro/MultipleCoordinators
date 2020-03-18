@@ -21,6 +21,7 @@ class CreateAccountCoordinator: Coordinator {
 extension CreateAccountCoordinator: Startable {
     func start() {
         let vc = CreateAccountViewController()
+        vc.tabBarItem = UITabBarItem(title: "Account", image: UIImage(systemName: "person.crop.circle.fill"), tag: 0)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }

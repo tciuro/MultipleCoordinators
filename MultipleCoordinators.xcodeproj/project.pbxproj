@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		595833452421AD3E00D45F5D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595833442421AD3E00D45F5D /* MainTabBarController.swift */; };
 		59FC408F241F07C00045699E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC408E241F07C00045699E /* AppDelegate.swift */; };
 		59FC4091241F07C00045699E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC4090241F07C00045699E /* SceneDelegate.swift */; };
 		59FC4093241F07C00045699E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC4092241F07C00045699E /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		595833442421AD3E00D45F5D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		59FC408B241F07C00045699E /* MultipleCoordinators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleCoordinators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FC408E241F07C00045699E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59FC4090241F07C00045699E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		59FC40B3241F08660045699E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				595833442421AD3E00D45F5D /* MainTabBarController.swift */,
 				59FC4092241F07C00045699E /* ViewController.swift */,
 				59FC40B9241F0F090045699E /* BuyViewController.swift */,
 				59FC40BB241F0F160045699E /* CreateAccountViewController.swift */,
@@ -298,6 +301,7 @@
 			files = (
 				59FC40C3241F24170045699E /* BuyCoordinator.swift in Sources */,
 				59FC40BC241F0F160045699E /* CreateAccountViewController.swift in Sources */,
+				595833452421AD3E00D45F5D /* MainTabBarController.swift in Sources */,
 				59FC40CA241F39D60045699E /* CreateAccountCoordinator.swift in Sources */,
 				59FC40B6241F08E90045699E /* Coordinator.swift in Sources */,
 				59FC40C0241F11860045699E /* GFButton.swift in Sources */,

@@ -27,6 +27,7 @@ protocol BuyStartable {
 extension BuyCoordinator: BuyStartable {
     func start(with segmentedControl: TCSegmentedControl) {
         let vc = BuyViewController()
+        vc.tabBarItem = UITabBarItem(title: "Buy", image: UIImage(systemName: "cart.fill"), tag: 0)
         vc.productSegmentedControl = segmentedControl
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
